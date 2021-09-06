@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Kelompok 5</title>
+</head>
+<body>
+    <h2>Test Nama Negara</h2>
+    <p><b>Kondisi:</b></p>
+    <p>1. Input nama Negara dengan 6 huruf</p>
+    <p>2. Jika input nama Negara terdapat 6 huruf maka Outputnya: Betul</p>
+    <p>3. Dan apabila Input nama Negara kurang atau lebih dari 6 huruf outputnya: Salah</p>
+<input type="text" id="namaNegara" placeholder="Masukan nama Negara" value="">
+<button onclick="validateNegara()">cek</button>
+    
+</body>
+</html>
+<script>
+function validateNegara() {
+  var namaNegara = Array.from(document.getElementById("namaNegara").value);
+  let lengthNamaNegara=0;
+  namaNegara.forEach((item) => {
+    lengthNamaNegara++
+});
+var textNegara= lengthNamaNegara!=6 ? 'Salah' : 'Betul';
+console.log(textNegara);
+}
+</script>
